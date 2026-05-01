@@ -5,6 +5,9 @@
 Developed and managed by [code2care.org](https://code2care.org/).
 Support the project: [Buy me a coffee](https://buymeacoffee.com/code2care).
 
+Website: https://code2care.github.io/c2.css/
+Demo: https://code2care.github.io/c2.css/demo.html
+
 ## World Record Claim
 
 `c2.css` claims the **smallest known responsive CSS UI framework by reproducible gzip size**.
@@ -47,6 +50,11 @@ This package is ready to host as a static GitHub Pages site.
 4. Open the generated Pages URL.
 
 `index.html` is the landing page, `demo.html` is the component demo, and the CSS files can be linked directly from the same repository.
+
+Live URLs:
+
+- Website: https://code2care.github.io/c2.css/
+- Demo: https://code2care.github.io/c2.css/demo.html
 
 The documentation page uses inline SVG icons. Keep icons inline when you customize the site; that preserves the no-font, no-image, no-extra-request rule.
 
