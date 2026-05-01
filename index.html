@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>c2.css - byte-coded UI framework by Code2care</title>
+  <meta name="description" content="The smallest known responsive CSS UI framework by reproducible gzip size.">
+  <link rel="stylesheet" href="c2.css">
+  <style>body{max-width:110ch}pre{white-space:pre-wrap}</style>
+</head>
+<body class="y">
+  <header class="r">
+    <strong>c2.css</strong>
+    <nav class="r">
+      <a href="#record">Record</a>
+      <a href="#builds">Builds</a>
+      <a href="#api">API</a>
+      <a href="#examples">Examples</a>
+      <a href="https://buymeacoffee.com/code2care">Support</a>
+      <a href="demo.html">Demo</a>
+    </nav>
+  </header>
+
+  <main class="y">
+    <section class="k y">
+      <p><small>Under 380B gzip. Pure HTML5 + CSS3. No JavaScript.</small></p>
+      <h1>c2.css is the smallest known responsive CSS UI framework.</h1>
+      <p>
+        c2.css is smaller than the known public size leaders while still covering
+        navbars, rows, grids, cards, buttons, forms, tables, code blocks,
+        quotes, highlights, video, responsive media, and native light/dark mode.
+      </p>
+      <p class="r">
+        <a class="b p" href="#install">Install</a>
+        <a class="b" href="#examples">See examples</a>
+        <a class="b" href="https://buymeacoffee.com/code2care">Buy me a coffee</a>
+        <a class="b" href="demo.html">Kitchen-sink demo</a>
+      </p>
+      <svg viewBox="0 0 96 32" role="img" aria-label="c2.css logo">
+        <rect width="96" height="32" rx="8" fill="CanvasText"/>
+        <text x="13" y="22" fill="Canvas" font-size="18" font-family="system-ui">c2.css</text>
+      </svg>
+    </section>
+
+    <section class="k y">
+      <h2>Copy The Whole Framework</h2>
+      <p>The complete record build is small enough to paste directly. Current verified size: <strong>628B raw, 378B gzip, 286B Brotli</strong>.</p>
+      <pre><code>:root{color-scheme:light dark}body,.c{max-width:70ch;margin:auto;padding:1em}body{font:1em/1.5 system-ui}img,video,svg{max-width:100%}button,input,select,textarea,.b{font:inherit;padding:.5em}button,.b,.k,pre{border:1px solid;border-radius:.5em}.b{display:inline-block;text-decoration:none}.p{background:CanvasText;color:Canvas}.r,.g{display:flex;gap:1em;flex-wrap:wrap}.g&gt;*{flex:1 12em}.y&gt;*+*{margin-top:1em}.k,pre{padding:1em}pre{overflow:auto}table{width:100%;border-spacing:0}th,td{border-bottom:1px solid;padding:.3em}.w{width:100%;box-sizing:border-box}blockquote{border-left:3px solid;padding-left:1em}mark{padding:.1em}</code></pre>
+      <p class="r">
+        <a class="b p" href="#install">Install snippet</a>
+        <a class="b" href="README.md">MIT license and docs</a>
+        <a class="b" href="https://buymeacoffee.com/code2care">Support Code2care</a>
+      </p>
+    </section>
+
+    <section class="y">
+      <h2>Philosophy</h2>
+      <div class="g">
+        <article class="k">
+          <h3>The Browser Is The Framework</h3>
+          <p>HTML already ships buttons, forms, tables, media, disclosure, progress, and dialog primitives. c2.css styles the gaps instead of rebuilding the platform.</p>
+        </article>
+        <article class="k">
+          <h3>Bytes Are Product Design</h3>
+          <p>Every selector and declaration must earn its place. Small CSS is not just performance work; it is a product constraint that keeps the API focused.</p>
+        </article>
+        <article class="k">
+          <h3>Native First, Custom Last</h3>
+          <p>Controls should keep platform behavior, accessibility, and user expectations. c2.css improves rhythm, spacing, and structure without faking widgets.</p>
+        </article>
+        <article class="k">
+          <h3>Readable Without A Build Step</h3>
+          <p>No compiler, config, token pipeline, plugin chain, JavaScript runtime, or generated utility layer. Link the file and write HTML.</p>
+        </article>
+      </div>
+      <blockquote>
+        The goal is not to make a tiny Bootstrap. The goal is to prove that good native interfaces can be measured in bytes.
+      </blockquote>
+    </section>
+
+    <section id="record" class="y">
+      <h2>Record Ranking</h2>
+      <div class="g">
+        <article class="k">
+          <h3>197B gzip</h3>
+          <p><code>c2.200.css</code> is the extreme component build.</p>
+        </article>
+        <article class="k">
+          <h3>378B gzip</h3>
+          <p><code>c2.css</code> is the full micro-framework build used by this page.</p>
+        </article>
+        <article class="k">
+          <h3>0KB JS</h3>
+          <p>No runtime, dependencies, reset, fonts, images, or build step.</p>
+        </article>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Rank</th><th>Framework</th><th>Claim</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><code>c2.css</code></td><td>378B gzip</td><td>responsive UI core and native dark mode</td></tr>
+          <tr><td>2</td><td><a href="https://ajusa.github.io/lit/docs/lit.html">lit</a></td><td>395B gzip</td><td>responsive grid, cards, forms, tables</td></tr>
+          <tr><td>3</td><td><a href="https://www.skypack.dev/view/bitty-css">bitty-css</a></td><td>793B gzip</td><td>classless CSS</td></tr>
+          <tr><td>4</td><td><a href="https://cdnjs.com/libraries/min">min</a></td><td>995B</td><td>small CSS framework</td></tr>
+          <tr><td>5</td><td><a href="https://browser.style/">browser.style</a></td><td>~1KB Brotli</td><td>native/system-color direction</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="y">
+      <h2>Verified Sizes</h2>
+      <table>
+        <thead>
+          <tr><th>Build</th><th>Raw</th><th>gzip</th><th>Brotli</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>c2.nano.css</code></td><td>187B</td><td>164B</td><td>121B</td></tr>
+          <tr><td><code>c2.200.css</code></td><td>236B</td><td>197B</td><td>162B</td></tr>
+          <tr><td><code>c2.css</code></td><td>628B</td><td>378B</td><td>286B</td></tr>
+        </tbody>
+      </table>
+      <pre><code>./size.sh</code></pre>
+    </section>
+
+    <section class="y">
+      <h2>Included Features</h2>
+      <p>Under 380B gzip still covers the patterns most small sites and docs actually need.</p>
+      <div class="g">
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M3 5h18v4H3zM3 11h18v8H3z"/></svg><h3>Navbar</h3><p>Use semantic <code>header</code>, <code>nav</code>, and <code>r</code>.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M4 4h7v7H4zm9 0h7v7h-7zM4 13h7v7H4zm9 0h7v7h-7z"/></svg><h3>Responsive Grid</h3><p><code>g</code> creates wrapping equal-width columns.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M5 4h14v16H5zM7 6v12h10V6z"/></svg><h3>Cards</h3><p><code>k</code> creates thin bordered panels.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M4 8h16v8H4z"/></svg><h3>Buttons</h3><p>Native buttons and button-like links with <code>b</code>.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="m12 3 3 6 6 1-4.5 4 1 7-5.5-3-5.5 3 1-7L3 10l6-1z"/></svg><h3>Primary Actions</h3><p><code>p</code> uses system colors for contrast.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M4 5h16v3H4zm0 6h16v3H4zm0 6h10v3H4z"/></svg><h3>Forms</h3><p>Inputs, selects, textareas, radios, and checkboxes inherit cleanly.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M4 5h16v14H4zm2 2v2h12V7zm0 4v2h12v-2zm0 4v2h12v-2z"/></svg><h3>Tables</h3><p>Full-width tables with simple row separators.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M5 4h14v16H5zm3 4h8v2H8zm0 4h8v2H8z"/></svg><h3>Code Blocks</h3><p>Scrollable, bordered <code>pre</code> blocks.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M6 6h6v6H9v6H6zm9 0h6v6h-3v6h-3z"/></svg><h3>Quotes</h3><p>Styled <code>blockquote</code> callouts.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M4 5h16v4H4zm0 6h10v4H4zm0 6h16v2H4z"/></svg><h3>Highlights</h3><p><mark>Marked text</mark> gets compact padding.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M4 5h16v14H4zm6 4v6l6-3z"/></svg><h3>Video</h3><p>Responsive <code>video</code> elements without wrappers.</p></article>
+        <article class="k"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="CanvasText" d="M12 2a10 10 0 1 0 0 20 7 7 0 0 1 0-20z"/></svg><h3>Dark Mode</h3><p>Native light/dark mode through <code>color-scheme</code>.</p></article>
+      </div>
+    </section>
+
+    <section class="k y">
+      <h2>GitHub Pages Ready</h2>
+      <p>This repo is static. Push it to GitHub, enable Pages from the repository root, and <code>index.html</code> becomes the website.</p>
+      <div class="g">
+        <article class="k">
+          <h3>1. Push</h3>
+          <pre><code>git init
+git add .
+git commit -m "Launch c2.css"
+git branch -M main
+git remote add origin https://github.com/&lt;owner&gt;/c2.css.git
+git push -u origin main</code></pre>
+        </article>
+        <article class="k">
+          <h3>2. Enable Pages</h3>
+          <p>GitHub repo settings, Pages, deploy from branch, root.</p>
+        </article>
+        <article class="k">
+          <h3>3. Keep Icons Inline</h3>
+          <p>The page uses inline SVG icons. No icon font, image file, or extra request is needed.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="builds" class="y">
+      <h2>Choose A Build</h2>
+      <div class="g">
+        <article class="k">
+          <h3>c2.nano.css</h3>
+          <p>187B raw. Native nucleus for mostly semantic HTML pages.</p>
+          <pre><code>&lt;link rel="stylesheet" href="c2.nano.css"&gt;</code></pre>
+        </article>
+        <article class="k">
+          <h3>c2.200.css</h3>
+          <p>197B gzip. Component-oriented build for harsh byte ceilings.</p>
+          <pre><code>&lt;link rel="stylesheet" href="c2.200.css"&gt;</code></pre>
+        </article>
+        <article class="k">
+          <h3>c2.css</h3>
+          <p>378B gzip. The full micro-framework core.</p>
+          <pre><code>&lt;link rel="stylesheet" href="c2.css"&gt;</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <section id="install" class="k y">
+      <h2>Install</h2>
+      <p>Use the record build for the best coverage-to-byte ratio.</p>
+      <pre><code>&lt;link rel="stylesheet" href="c2.css"&gt;</code></pre>
+      <p>Then write normal HTML with byte-coded primitives.</p>
+      <pre><code>&lt;main class="c y"&gt;
+  &lt;section class="k y"&gt;
+    &lt;h1&gt;Ship smaller interfaces&lt;/h1&gt;
+    &lt;p&gt;Native, fast, readable.&lt;/p&gt;
+    &lt;p class="r"&gt;
+      &lt;a class="b p" href="/start"&gt;Start&lt;/a&gt;
+      &lt;a class="b" href="/demo"&gt;Demo&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+    </section>
+
+    <section id="api" class="y">
+      <h2>Byte API</h2>
+      <table>
+        <thead>
+          <tr><th>Class</th><th>Meaning</th><th>CSS behavior</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>c</code></td><td>container</td><td>readable width, centered, padded</td></tr>
+          <tr><td><code>r</code></td><td>row</td><td>flex row with wrapping and gap</td></tr>
+          <tr><td><code>g</code></td><td>grid</td><td>responsive equal-width columns</td></tr>
+          <tr><td><code>y</code></td><td>stack</td><td>vertical rhythm between children</td></tr>
+          <tr><td><code>k</code></td><td>card</td><td>padding, thin border, radius</td></tr>
+          <tr><td><code>b</code></td><td>button</td><td>button-like link styling</td></tr>
+          <tr><td><code>p</code></td><td>primary</td><td>system-color inverted action</td></tr>
+          <tr><td><code>w</code></td><td>wide</td><td>full-width field/media helper</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="y">
+      <h2>Full c2.css Code</h2>
+      <p>The complete record build is small enough to read in one block.</p>
+      <pre><code>:root{color-scheme:light dark}
+body,.c{max-width:70ch;margin:auto;padding:1em}
+body{font:1em/1.5 system-ui}
+img,video,svg{max-width:100%}
+button,input,select,textarea,.b{font:inherit;padding:.5em}
+button,.b,.k,pre{border:1px solid;border-radius:.5em}
+.b{display:inline-block;text-decoration:none}
+.p{background:CanvasText;color:Canvas}
+.r,.g{display:flex;gap:1em;flex-wrap:wrap}
+.g&gt;*{flex:1 12em}
+.y&gt;*+*{margin-top:1em}
+.k,pre{padding:1em}
+pre{overflow:auto}
+table{width:100%;border-spacing:0}
+th,td{border-bottom:1px solid;padding:.3em}
+.w{width:100%;box-sizing:border-box}
+blockquote{border-left:3px solid;padding-left:1em}
+mark{padding:.1em}</code></pre>
+    </section>
+
+    <section class="y">
+      <h2>How It Works</h2>
+      <table>
+        <thead>
+          <tr><th>Rule</th><th>Why it exists</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>color-scheme</code></td><td>native light/dark page and form control behavior</td></tr>
+          <tr><td><code>body,.c</code></td><td>readable default page width and reusable container</td></tr>
+          <tr><td><code>font:1em/1.5 system-ui</code></td><td>compact typography in one declaration</td></tr>
+          <tr><td><code>img,video,svg</code></td><td>responsive media without wrappers</td></tr>
+          <tr><td><code>button,input...</code></td><td>forms and button-like links align visually</td></tr>
+          <tr><td><code>.r,.g</code></td><td>one flex primitive powers nav, actions, and grid</td></tr>
+          <tr><td><code>.k,pre</code></td><td>cards and code blocks share border/padding behavior</td></tr>
+          <tr><td><code>table/th/td</code></td><td>tables look deliberate without a full table system</td></tr>
+          <tr><td><code>blockquote</code></td><td>quote/callout styling in one small rule</td></tr>
+          <tr><td><code>mark</code></td><td>compact highlighted text</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="examples" class="y">
+      <h2>Component Examples</h2>
+
+      <article class="k y">
+        <h3>Navbar</h3>
+        <div class="g">
+          <header class="r">
+            <strong>Brand</strong>
+            <nav class="r">
+              <a href="#record">Record</a>
+              <a href="#api">API</a>
+              <a href="#examples">Examples</a>
+            </nav>
+          </header>
+          <pre><code>&lt;header class="r"&gt;
+  &lt;strong&gt;Brand&lt;/strong&gt;
+  &lt;nav class="r"&gt;
+    &lt;a href="/"&gt;Home&lt;/a&gt;
+    &lt;a href="/docs"&gt;Docs&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+        </div>
+      </article>
+
+      <article class="k y">
+        <h3>Row / Toolbar</h3>
+        <div class="g">
+          <p class="r">
+            <button>Save</button>
+            <button>Preview</button>
+            <a class="b" href="#install">Share</a>
+          </p>
+          <pre><code>&lt;p class="r"&gt;
+  &lt;button&gt;Save&lt;/button&gt;
+  &lt;button&gt;Preview&lt;/button&gt;
+  &lt;a class="b" href="/"&gt;Share&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+        </div>
+      </article>
+
+      <article class="k y">
+        <h3>Container + Stack</h3>
+        <div class="g">
+          <div class="k y">
+            <h4>Visual</h4>
+            <p>This panel is a card inside the normal readable page container.</p>
+            <p>Stack spacing comes from <code>y</code>.</p>
+          </div>
+          <pre><code>&lt;main class="c y"&gt;
+  &lt;section class="k y"&gt;
+    &lt;h2&gt;Title&lt;/h2&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+        </div>
+      </article>
+
+      <article class="k y">
+        <h3>Grid + Cards</h3>
+        <div class="g">
+          <div class="g">
+            <article class="k">
+              <h4>One</h4>
+              <p>Responsive column.</p>
+            </article>
+            <article class="k">
+              <h4>Two</h4>
+              <p>Same primitive.</p>
+            </article>
+            <article class="k">
+              <h4>Three</h4>
+              <p>Columns wrap naturally.</p>
+            </article>
+          </div>
+          <pre><code>&lt;div class="g"&gt;
+  &lt;article class="k"&gt;One&lt;/article&gt;
+  &lt;article class="k"&gt;Two&lt;/article&gt;
+  &lt;article class="k"&gt;Three&lt;/article&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </article>
+
+      <article class="k y">
+        <h3>Buttons</h3>
+        <div class="g">
+          <p class="r">
+            <a class="b p" href="#install">Primary link</a>
+            <a class="b" href="demo.html">Secondary link</a>
+            <button>Button</button>
+          </p>
+          <pre><code>&lt;p class="r"&gt;
+  &lt;a class="b p" href="/"&gt;Primary&lt;/a&gt;
+  &lt;a class="b" href="/"&gt;Secondary&lt;/a&gt;
+  &lt;button&gt;Button&lt;/button&gt;
+&lt;/p&gt;</code></pre>
+        </div>
+      </article>
+
+      <article class="k y">
+        <h3>Form</h3>
+        <div class="g">
+          <form class="k y">
+            <label>
+              Email
+              <input class="w" type="email" placeholder="you@example.com">
+            </label>
+            <label>
+              Type
+              <select class="w">
+                <option>Question</option>
+                <option>Bug</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea class="w" rows="3"></textarea>
+            </label>
+            <button class="p">Send</button>
+          </form>
+          <pre><code>&lt;form class="k y"&gt;
+  &lt;label&gt;Email
+    &lt;input class="w" type="email"&gt;
+  &lt;/label&gt;
+  &lt;label&gt;Message
+    &lt;textarea class="w"&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+  &lt;button class="p"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </article>
+
+      <article class="k y">
+        <h3>Table</h3>
+        <div class="g">
+          <table>
+            <thead>
+              <tr><th>Build</th><th>gzip</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>c2.200.css</code></td><td>197B</td></tr>
+              <tr><td><code>c2.css</code></td><td>378B</td></tr>
+            </tbody>
+          </table>
+          <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Build&lt;/th&gt;&lt;th&gt;gzip&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;c2.css&lt;/td&gt;&lt;td&gt;378B&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+      </article>
+
+      <article class="k y">
+        <h3>Responsive Media</h3>
+        <div class="g">
+          <div class="y">
+            <video class="w" controls aria-label="Responsive video example"></video>
+            <svg viewBox="0 0 640 220" role="img" aria-label="Responsive SVG sample">
+              <rect width="640" height="220" fill="CanvasText"/>
+              <circle cx="120" cy="110" r="60" fill="Canvas"/>
+              <rect x="230" y="72" width="310" height="24" fill="Canvas"/>
+              <rect x="230" y="120" width="220" height="24" fill="Canvas"/>
+            </svg>
+          </div>
+          <pre><code>&lt;svg viewBox="0 0 640 220"&gt;
+  ...
+&lt;/svg&gt;
+
+&lt;video class="w" controls&gt;&lt;/video&gt;
+&lt;img class="w" src="image.jpg" alt=""&gt;</code></pre>
+        </div>
+      </article>
+
+      <article class="k y">
+        <h3>Quote + Highlight</h3>
+        <div class="g">
+          <blockquote>
+            Small can still feel <mark>complete</mark> when HTML does most of the work.
+          </blockquote>
+          <pre><code>&lt;blockquote&gt;
+  Small can still feel &lt;mark&gt;complete&lt;/mark&gt;.
+&lt;/blockquote&gt;</code></pre>
+        </div>
+      </article>
+
+      <article class="k y">
+        <h3>Code Block</h3>
+        <div class="g">
+          <pre><code>npm install nothing
+ship bytes, not bundles</code></pre>
+          <pre><code>&lt;pre&gt;&lt;code&gt;
+npm install nothing
+ship bytes, not bundles
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+        </div>
+      </article>
+
+      <article class="k y">
+        <h3>Native Components</h3>
+        <div class="g">
+          <div class="y">
+            <details class="k">
+              <summary>Details</summary>
+              <p>Native disclosure with no script.</p>
+            </details>
+            <progress class="w" max="100" value="72">72%</progress>
+            <meter class="w" min="0" max="10" value="7">7</meter>
+          </div>
+          <pre><code>&lt;details class="k"&gt;
+  &lt;summary&gt;Details&lt;/summary&gt;
+  &lt;p&gt;Native disclosure.&lt;/p&gt;
+&lt;/details&gt;
+&lt;progress class="w" max="100" value="72"&gt;&lt;/progress&gt;
+&lt;meter class="w" min="0" max="10" value="7"&gt;&lt;/meter&gt;</code></pre>
+        </div>
+      </article>
+    </section>
+
+    <section class="k y">
+      <h2>Use It For</h2>
+      <div class="g">
+        <article class="k">
+          <h3>Docs</h3>
+          <p>Readable pages, examples, code samples, tables, and forms.</p>
+        </article>
+        <article class="k">
+          <h3>Landing Pages</h3>
+          <p>Fast one-page sites where content matters more than decoration.</p>
+        </article>
+        <article class="k">
+          <h3>Prototypes</h3>
+          <p>Interfaces that look deliberate while preserving native behavior.</p>
+        </article>
+      </div>
+      <p class="r">
+        <a class="b p" href="demo.html">Open kitchen-sink demo</a>
+        <a class="b" href="README.md">Read README</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>c2.css is developed and managed by <a href="https://code2care.org/">code2care.org</a>. MIT licensed. Pure HTML and CSS with no JavaScript, fonts, or images. <a href="https://buymeacoffee.com/code2care">Buy me a coffee</a>.</small></p>
+  </footer>
+</body>
+</html>

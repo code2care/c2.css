@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>c2.css component demo</title>
+  <link rel="stylesheet" href="c2.css">
+</head>
+<body class="y">
+  <header class="r">
+    <strong>c2.css</strong>
+    <nav class="r">
+      <a href="#layout">Layout</a>
+      <a href="#actions">Actions</a>
+      <a href="#forms">Forms</a>
+      <a href="#native">Native</a>
+      <a href="index.html">Website</a>
+    </nav>
+  </header>
+
+  <main class="y">
+    <section class="k y">
+      <p><small>628 raw bytes. 378B gzip. 286B Brotli.</small></p>
+      <h1>A tiny UI framework can still cover real interface work.</h1>
+      <p>
+        This demo uses only <code>c2.css</code>. The classes are intentionally
+        byte-coded: <code>c</code> container, <code>r</code> row,
+        <code>g</code> grid, <code>y</code> stack, <code>k</code> card,
+        <code>b</code> button, <code>p</code> primary, and <code>w</code> wide.
+      </p>
+      <p class="r">
+        <a class="b p" href="#forms">Try forms</a>
+        <a class="b" href="#native">Native components</a>
+        <button>Native button</button>
+      </p>
+    </section>
+
+    <section id="layout" class="y">
+      <h2>Layout</h2>
+      <div class="g">
+        <article class="k">
+          <h3>Container</h3>
+          <p>The page width is readable by default. Use <code>c</code> when a nested container is needed.</p>
+        </article>
+        <article class="k">
+          <h3>Row</h3>
+          <p><code>r</code> creates a wrapping horizontal group for nav, toolbars, and actions.</p>
+        </article>
+        <article class="k">
+          <h3>Grid</h3>
+          <p><code>g</code> creates responsive equal-width columns with no breakpoint classes.</p>
+        </article>
+      </div>
+
+      <div class="g">
+        <article class="k">
+          <h3>One</h3>
+          <p>Cards are intentionally thin: padding, border, radius, nothing else.</p>
+        </article>
+        <article class="k">
+          <h3>Two</h3>
+          <p>Dark mode comes from the browser through <code>color-scheme</code>.</p>
+        </article>
+        <article class="k">
+          <h3>Three</h3>
+          <p>Native controls are preserved instead of replaced by heavy custom widgets.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="actions" class="y">
+      <h2>Actions, Text, and Media</h2>
+      <article class="k y">
+        <p class="r">
+          <a class="b p" href="#forms">Primary link</a>
+          <a class="b" href="#data">Secondary link</a>
+          <button class="p">Primary button</button>
+          <button>Default button</button>
+        </p>
+        <p>
+          Inline text uses browser defaults: <a href="#">links</a>, <strong>strong text</strong>,
+          <em>emphasis</em>, <mark>highlighted marks</mark>, <code>code</code>, and <small>small helper text</small>.
+        </p>
+        <blockquote>
+          Minimal CSS works when HTML carries the structure and the browser carries the behavior.
+        </blockquote>
+        <video class="w" controls aria-label="Responsive video example"></video>
+        <svg viewBox="0 0 640 180" role="img" aria-label="Responsive SVG sample">
+          <rect width="640" height="180" fill="CanvasText"/>
+          <circle cx="110" cy="90" r="54" fill="Canvas"/>
+          <rect x="210" y="52" width="340" height="22" fill="Canvas"/>
+          <rect x="210" y="92" width="260" height="22" fill="Canvas"/>
+        </svg>
+      </article>
+    </section>
+
+    <section id="forms" class="y">
+      <h2>Forms</h2>
+      <form class="k y">
+        <div class="g">
+          <label>
+            Name
+            <input class="w" placeholder="Ada Lovelace">
+          </label>
+          <label>
+            Email
+            <input class="w" type="email" placeholder="ada@example.com">
+          </label>
+        </div>
+        <div class="g">
+          <label>
+            Topic
+            <select class="w">
+              <option>Framework design</option>
+              <option>Performance</option>
+              <option>Accessibility</option>
+            </select>
+          </label>
+          <label>
+            Budget
+            <input class="w" type="range" min="0" max="100" value="64">
+          </label>
+        </div>
+        <label>
+          Message
+          <textarea class="w" rows="4">Small does not have to mean unfinished.</textarea>
+        </label>
+        <label><input type="checkbox"> Keep native controls</label>
+        <p>
+          <label><input type="radio" name="mode" checked> Core</label>
+          <label><input type="radio" name="mode"> 200B</label>
+          <label><input type="radio" name="mode"> Nano</label>
+        </p>
+        <p class="r">
+          <button class="p">Submit</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+
+    <section id="data" class="y">
+      <h2>Tables and Code</h2>
+      <table>
+        <thead>
+          <tr><th>File</th><th>Role</th><th>gzip</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>c2.nano.css</code></td><td>native nucleus</td><td>164B</td></tr>
+          <tr><td><code>c2.200.css</code></td><td>200B-class build</td><td>197B</td></tr>
+          <tr><td><code>c2.css</code></td><td>full micro-framework core</td><td>378B</td></tr>
+        </tbody>
+      </table>
+      <pre><code>&lt;main class="c y"&gt;
+  &lt;section class="k y"&gt;
+    &lt;h1&gt;Small UI&lt;/h1&gt;
+    &lt;a class="b p"&gt;Start&lt;/a&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+    </section>
+
+    <section id="native" class="y">
+      <h2>Native Components</h2>
+      <div class="g">
+        <details class="k">
+          <summary>Disclosure</summary>
+          <p><code>details</code> and <code>summary</code> work with no JavaScript.</p>
+        </details>
+        <article class="k">
+          <h3>Progress</h3>
+          <p><progress class="w" max="100" value="72">72%</progress></p>
+          <p><meter class="w" min="0" max="10" value="7">7</meter></p>
+        </article>
+        <article class="k">
+          <h3>Dialog</h3>
+          <p>The framework does not replace modal behavior. Use native <code>dialog</code> with your own small script when needed.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>Demo uses only <code>c2.css</code>. No custom CSS, JavaScript, external fonts, or image files.</small></p>
+  </footer>
+</body>
+</html>
