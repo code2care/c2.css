@@ -1,0 +1,45 @@
+{
+  "name": "@code2care/c2.css",
+  "version": "0.1.1",
+  "description": "378B gzip responsive CSS UI framework by Code2care.",
+  "license": "MIT",
+  "homepage": "https://code2care.github.io/c2.css/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code2care/c2.css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/code2care/c2.css/issues"
+  },
+  "keywords": [
+    "css",
+    "css-framework",
+    "micro-framework",
+    "minimal-css",
+    "html5",
+    "no-javascript"
+  ],
+  "style": "c2.css",
+  "exports": {
+    ".": "./c2.css",
+    "./c2.css": "./c2.css",
+    "./c2.200.css": "./c2.200.css",
+    "./c2.nano.css": "./c2.nano.css"
+  },
+  "files": [
+    "c2.css",
+    "c2.200.css",
+    "c2.nano.css",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "./test.sh",
+    "pack:check": "npm pack --dry-run"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  }
+}

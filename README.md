@@ -39,6 +39,7 @@ This is a public technical claim based on known CSS-framework size claims and re
 | `demo.html` | component/kitchen-sink demo built with `c2.css` |
 | `size.sh` | reproducible size measurement |
 | `test.sh` | release gate for files, links, classes, and gzip budgets |
+| `package.json` | GitHub Packages npm metadata |
 | `CONTRIBUTING.md` | contribution rules for byte-constrained changes |
 | `CHANGELOG.md` | release history |
 | `.github/` | issue and pull request templates |
@@ -155,6 +156,37 @@ Use the raw sub-200B nucleus for mostly native pages:
 ```html
 <link rel="stylesheet" href="c2.nano.css">
 ```
+
+## GitHub Packages
+
+c2.css is packaged for GitHub Packages as:
+
+```txt
+@code2care/c2.css
+```
+
+Install from GitHub's npm registry:
+
+```sh
+npm config set @code2care:registry https://npm.pkg.github.com
+npm install @code2care/c2.css
+```
+
+Then use one of the packaged CSS files:
+
+```html
+<link rel="stylesheet" href="node_modules/@code2care/c2.css/c2.css">
+```
+
+Bundler-style CSS imports can also target a build directly:
+
+```js
+import "@code2care/c2.css/c2.css";
+import "@code2care/c2.css/c2.200.css";
+import "@code2care/c2.css/c2.nano.css";
+```
+
+GitHub Packages may require npm authentication even for package installs. If npm prompts for auth, use a GitHub token with `read:packages`.
 
 ## API
 

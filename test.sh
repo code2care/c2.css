@@ -15,7 +15,7 @@ assert_le() {
   fi
 }
 
-for file in c2.nano.css c2.200.css c2.css index.html demo.html README.md LICENSE size.sh CONTRIBUTING.md CHANGELOG.md .github/workflows/ci.yml .github/ISSUE_TEMPLATE/bug_report.md .github/ISSUE_TEMPLATE/feature_request.md .github/PULL_REQUEST_TEMPLATE.md; do
+for file in c2.nano.css c2.200.css c2.css index.html demo.html README.md LICENSE size.sh test.sh package.json CONTRIBUTING.md CHANGELOG.md .github/workflows/ci.yml .github/workflows/publish.yml .github/ISSUE_TEMPLATE/bug_report.md .github/ISSUE_TEMPLATE/feature_request.md .github/PULL_REQUEST_TEMPLATE.md; do
   test -s "$file"
 done
 
@@ -31,4 +31,7 @@ assert_le c2.nano.css "$(gzip_bytes c2.nano.css)" 170
 assert_le c2.200.css "$(gzip_bytes c2.200.css)" 200
 assert_le c2.css "$(gzip_bytes c2.css)" 380
 
+NPM_CONFIG_CACHE=${NPM_CONFIG_CACHE:-${TMPDIR:-/tmp}/c2-npm-cache}
+export NPM_CONFIG_CACHE
+npm pack --dry-run >/dev/null
 ./size.sh
