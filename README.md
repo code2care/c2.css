@@ -38,6 +38,10 @@ This is a public technical claim based on known CSS-framework size claims and re
 | `index.html` | documentation website built with `c2.css` |
 | `demo.html` | component/kitchen-sink demo built with `c2.css` |
 | `size.sh` | reproducible size measurement |
+| `test.sh` | release gate for files, links, classes, and gzip budgets |
+| `CONTRIBUTING.md` | contribution rules for byte-constrained changes |
+| `CHANGELOG.md` | release history |
+| `.github/` | issue and pull request templates |
 | `LICENSE` | MIT License |
 
 ## GitHub Pages
@@ -76,6 +80,18 @@ The design goals:
 
 The goal is not to make a tiny Bootstrap. The goal is to prove that good native interfaces can be measured in bytes.
 
+## Browser Support
+
+c2.css targets current evergreen browsers and relies on stable platform features: semantic HTML, flexbox, system fonts, system colors, responsive media, and `color-scheme`.
+
+Support policy:
+
+- Pages must remain readable if a progressive feature is ignored.
+- Native controls should keep browser behavior instead of being replaced.
+- Light/dark mode uses the browser's own color-scheme handling.
+- The demo should be smoke-tested in Chromium, Firefox, and Safari before a release.
+- App-specific behavior such as opening a `dialog` remains outside the CSS framework.
+
 ## Size
 
 Run:
@@ -91,12 +107,28 @@ Current local measurements:
 | `c2.nano.css` | 187B | 164B | 121B |
 | `c2.200.css` | 236B | 197B | 162B |
 | `c2.css` | 628B | 378B | 286B |
-| `index.html` | 22285B | 5760B | 4683B |
-| `demo.html` | 6503B | 2100B | 1600B |
-| `index.html + c2.css` | 22913B | 5781B | 4699B |
-| `demo.html + c2.css` | 7131B | 2412B | 1860B |
+| `index.html` | 22733B | 5848B | 4753B |
+| `demo.html` | 7070B | 2269B | 1731B |
+| `index.html + c2.css` | 23361B | 5869B | 4768B |
+| `demo.html + c2.css` | 7698B | 2580B | 1991B |
 
 `gzip` is measured with `gzip -9 -n` so filename and timestamp metadata do not affect the result.
+
+## Testing
+
+Run the release gate:
+
+```sh
+./test.sh
+```
+
+It verifies required files, public links, core byte-coded classes, and gzip budgets:
+
+- `c2.nano.css` must stay at or below 170B gzip.
+- `c2.200.css` must stay at or below 200B gzip.
+- `c2.css` must stay at or below 380B gzip.
+
+GitHub Actions runs the same gate on pushes and pull requests.
 
 ## Install
 
@@ -340,6 +372,18 @@ Native components:
 - Prefer one rule that helps multiple components.
 - Do not add JavaScript to the framework.
 - Do not claim a record without publishing exact measurement commands.
+
+## Contributing
+
+See `CONTRIBUTING.md`. Pull requests should include the output of `./test.sh` and explain why the change belongs in a framework measured in bytes.
+
+## Versioning
+
+The first public release is `0.1.0`. Tags should follow semantic versioning once the API stabilizes:
+
+- Patch: documentation, tests, or compatible byte reductions.
+- Minor: new compatible CSS behavior or examples.
+- Major: class name or behavior changes that require user HTML changes.
 
 ## License
 
